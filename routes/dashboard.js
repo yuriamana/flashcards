@@ -4,3 +4,4 @@ var router = express.Router();
 const CardModel = require("./../models/Card");
 const UserModel = require("./../models/User");
 
+module.exports = router
