@@ -50,9 +50,13 @@ app.use(require("./middlewares/exposeLoginStatus"));
 
 //connect routers
 const indexRouter = require("./routes/index");
+const dashboardRouter = require("./routes/dashboard")
+const authRouter = require("./routes/auth")
 
 //use routers
 app.use("/", indexRouter); // use routers
+app.use("/", dashboardRouter); 
+app.use("/", authRouter);
 
 app.use(function (req, res, next) {
   next(createError(404));
