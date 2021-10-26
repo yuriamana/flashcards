@@ -4,11 +4,29 @@
     <label for="category" class="category">Category</label>
     <select id="category-selector" class="select" name="category" required>
       <option selected disabled value="-1" selected>Choose a category</option>
-      <option value="men">Men</option>
-      <option value="women">Women</option>
-      <option value="kids">Kids</option>
+      <option value="FrenchLovers">FrenchLovers</option>
+      <option value="Sports">Sports</option>
+      <option value="Programming">Programming</option>
+      <option value="General-knowledge">General knowledge</option>
+      <option value="Customs-Manners">Customs and Manners</option>
     </select>
   </div>
+
+  <div>
+    <label for="serie" class="Serie">Serie</label>
+    <select id="serie-selector" class="select" name="serie" required>
+      <option selected disabled value="-1" selected>Choose a serie</option>
+      <option value="Culinary-Specialties">Culinary Specialties</option>
+      <option value="Tennis">Tennis</option>
+      <option value="JavaScript">JavaScript</option>
+      <option value="Monument">Monument</option>
+      <option value="Greeting">Greetings</option>
+      {{#each serie}}
+         <option value="{{_id}}">{{name}}</option>
+      {{/each}}
+    </select>
+  </div>
+
   <div>
     <label for="question"></label>
     <input type="text" name="question" />
@@ -18,5 +36,5 @@
     <label for="answer"></label>
     <input type="text" name="answer" />
   </div>
-
+<button>Add a new Card !</button>
 </form>

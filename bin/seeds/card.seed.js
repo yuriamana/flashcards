@@ -23,8 +23,8 @@ const cards = [
         answer : "August 30, 1993",
     },
     {
-        question : "What is the capital of France?",
-        answer : "Paris",
+        question : "How do you greet an old person in the Philippines?",
+        answer : "You take their hand and put in on your forehead",
     },
 ];
 
