@@ -1,14 +1,22 @@
-{{!-- const cardSchema = new Schema({
-  category: {
-    type: String,
-    required: true,
-    enum: ["study", "travel", "general culture"]
-  },
-  country: String, //list of countries - API
-  language: String, //list of languages - API
-  expression: { type: String, required: true },
-  description: { type: String, required: true },
-  image: String,
-  audio: String, //record your own voice
-  link: String //link to a youtube video
-}); --}}
+<form action="/dashboard/add" method="post">
+  <h3>Add a new card</h3>
+  <div>
+    <label for="category" class="category">Category</label>
+    <select id="category-selector" class="select" name="category" required>
+      <option selected disabled value="-1" selected>Choose a category</option>
+      <option value="men">Men</option>
+      <option value="women">Women</option>
+      <option value="kids">Kids</option>
+    </select>
+  </div>
+  <div>
+    <label for="question"></label>
+    <input type="text" name="question" />
+  </div>
+
+  <div>
+    <label for="answer"></label>
+    <input type="text" name="answer" />
+  </div>
+
+</form>

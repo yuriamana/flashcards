@@ -4,8 +4,7 @@ const Schema = mongoose.Schema;
 const cardSchema = new Schema({
   question: { type: String, required: true },
   answer: { type: String, required: true },
-  id_series: { type: Schema.Types.ObjectId, ref: "serie" },
-  id_authors: { type: Schema.Types.ObjectId, ref: "user" },
+  id_author: { type: Schema.Types.ObjectId, ref: "user" },
 });
 
 const CardModel = mongoose.model("card", cardSchema);

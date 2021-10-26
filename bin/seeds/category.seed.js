@@ -11,13 +11,13 @@ const categories = [
     name: "Sports",
   },
   {
-    name: "Mathematiques",
+    name: "Programming",
   },
   {
-    name: "Gardening",
+    name: "General knowledge",
   },
   {
-    name: "Cooking",
+    name: "Customs and Manners",
   },
 ];
 
