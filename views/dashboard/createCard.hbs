@@ -1,4 +1,4 @@
-<form action="/dashboard/add" method="post">
+<form action="/dashboard/add/card" method="post">
   <h3>Add a new card</h3>
   <div>
     <label for="category" class="category">Category</label>
@@ -16,25 +16,25 @@
     <label for="serie" class="Serie">Serie</label>
     <select id="serie-selector" class="select" name="serie" required>
       <option selected disabled value="-1" selected>Choose a serie</option>
-      <option value="Culinary-Specialties">Culinary Specialties</option>
+      {{!-- <option value="Culinary-Specialties">Culinary Specialties</option>
       <option value="Tennis">Tennis</option>
       <option value="JavaScript">JavaScript</option>
       <option value="Monument">Monument</option>
-      <option value="Greeting">Greetings</option>
+      <option value="Greeting">Greetings</option> --}}
       {{#each serie}}
-         <option value="{{_id}}">{{name}}</option>
+         <option value="{{this._id}}">{{this.name}}</option>
       {{/each}}
     </select>
   </div>
 
   <div>
     <label for="question"></label>
-    <input type="text" name="question" />
+    <input type="text" name="question" placeholder="question"/>
   </div>
 
   <div>
     <label for="answer"></label>
-    <input type="text" name="answer" />
+    <input type="text" name="answer" placeholder="answer"/>
   </div>
 <button>Add a new Card !</button>
 </form>

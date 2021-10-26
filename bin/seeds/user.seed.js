@@ -4,20 +4,23 @@ const UserModel = require('../../models/User')
 const CardModel = require("./../../models/Card");
 const CategoryModel = require("./../../models/Category");
 const SerieModel = require("./../../models/Serie");
+const bcrypt = require("bcrypt");
+
+const safePass = bcrypt.hashSync('1234')
 
 const users = [
   {
     name: "Ironhacker",
     lastname: "Hacker Squad",
     email: "ironhack@bootcamp.fr",
-    password: "h@lloween",
+    password: safePass,
     
   },
   {
     name: "Ironhacker1",
     lastname: "Hacker Squad1",
     email: "ironhack1@bootcamp.fr",
-    password: "h@lloween1",
+    password: safePass,
     
   },
 ];

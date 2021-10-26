@@ -34,6 +34,17 @@ app.use(
   })
 );
 
+// FAKE USER
+app.use((req, res, next) => {
+  req.session.currentUser = {
+    name: "Ironhacker",
+    lastname: "Hacker Squad",
+    email:"ironhack@bootcamp.fr",
+    _id: '6178005e4ea6fa566c439f84'
+  }
+  next()
+})
+
 // FLASH MESSAGES
 // enable "flash messaging" system : a message persisting during 1 http call (ex: redirect)
 // flash relies on the express-session mechanism

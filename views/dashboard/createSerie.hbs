@@ -1,0 +1,19 @@
+<form action="/dashboard/add/serie" method="post">
+  <h3>Add a new serie</h3>
+  <div>
+    <label for="category" class="category">Category</label>
+    <select id="category-selector" class="select" name="category" required>
+      <option selected disabled value="-1" selected>Choose a category</option>
+      {{#each categories}}
+      <option value="{{_id}}">{{name}}</option>
+      {{/each}}
+    </select>
+  </div>
+
+   <div>
+    <label for="serie">Serie: </label>
+    <input type="text" name="name" id='serie'/>
+  </div>
+
+<button>Add a new Serie !</button>
+</form>
