@@ -6,7 +6,7 @@ const CategoryModel = require("./../../models/Category");
 const SerieModel = require("./../../models/Serie");
 const bcrypt = require("bcrypt");
 
-const safePass = bcrypt.hashSync('1234')
+const safePass = bcrypt.hashSync(`1234`, 10)
 
 const users = [
   {
