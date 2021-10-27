@@ -1,15 +1,15 @@
-<h2>index</h2>
-
 <a href="/auth/signin">Sign in</a>
+<a href="/dashboard/add/card">Add a card</a>
+<a href="/dashboard/add/serie">Add a serie</a>
+<a href="/dashboard">Dashboard</a>
 
-<h2>All the categories</h2>
+<h2>Categories list</h2>
 <ul>
-{{#each categories}}
-<li>
-    {{this.name}}
-
-</li>
-{{/each}}
+  {{#each categories}}
+    <li>
+      {{this.name}}
+    
+    </li>
+  {{/each}}
 
 </ul>
-

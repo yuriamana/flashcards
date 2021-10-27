@@ -1,7 +1,9 @@
 <form action="/dashboard/add/card" method="post">
   <h3>Add a new card</h3>
   <div>
-    <label for="category" class="category">Category</label>
+    <label for="category" class="category">Category:</label>
+    </div>
+    <div>
     <select id="category-selector" class="select" name="category" required>
       <option selected disabled value="-1" selected>Choose a category</option>
       <option value="FrenchLovers">FrenchLovers</option>
@@ -13,9 +15,11 @@
   </div>
 
   <div>
-    <label for="serie" class="Serie">Serie</label>
+    <label for="serie" class="Serie">Serie:</label>
+    </div>
+    <div>
     <select id="serie-selector" class="select" name="serie" required>
-      <option selected disabled value="-1" selected>Choose a serie</option>
+      <option selected disabled value="-1" selected>Choose a serie:</option>
       {{!-- <option value="Culinary-Specialties">Culinary Specialties</option>
       <option value="Tennis">Tennis</option>
       <option value="JavaScript">JavaScript</option>
@@ -28,13 +32,19 @@
   </div>
 
   <div>
-    <label for="question"></label>
-    <input type="text" name="question" placeholder="question"/>
+    <label for="question">Question:</label>
+    </div>
+    <div>
+    <textarea name="question" rows="5" cols="33"> </textarea>
   </div>
 
   <div>
-    <label for="answer"></label>
-    <input type="text" name="answer" placeholder="answer"/>
+    <label for="answer">Answer:</label>
+    </div>
+    <div>
+    <textarea name="answer" rows="5" cols="33"> </textarea
   </div>
-<button>Add a new Card !</button>
+  <div>
+<button>Add a new card</button>
+</div>
 </form>

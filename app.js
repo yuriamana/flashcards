@@ -40,7 +40,7 @@ app.use((req, res, next) => {
     name: "Ironhacker",
     lastname: "Hacker Squad",
     email:"ironhack@bootcamp.fr",
-    _id: '6178005e4ea6fa566c439f84'
+    _id: '6178306b44fef4612decdba9'
   }
   next()
 })
@@ -67,7 +67,7 @@ const authRouter = require("./routes/auth")
 //use routers
 app.use("/", indexRouter); // use routers
 app.use("/", dashboardRouter); 
-app.use("/", authRouter);
+app.use("/auth", authRouter);
 
 app.use(function (req, res, next) {
   next(createError(404));

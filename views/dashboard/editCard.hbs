@@ -1,10 +1,14 @@
-<form action="/dashboard/edit/card" method="post"></form>
-<h2>edit card</h2>
+<form action="/dashboard/edit/card/{{card._id}}" method="post"></form>
+<h2>Edit card</h2>
 
   <div>
-    <label for="answer"></label>
-    <input type="text" name="answer" placeholder="answer" value={{this.answer}}/>
+    <label for="answer">Answer: </label>
+    <input id='answer' type="text" name="answer" placeholder="answer" value={{card.answer}}/>
+  </div>
+  <div>
+    <label for="question">Question: </label>
+    <input type="text" id='question' name='question' value={{card.question}}>
   </div>
 
-<button>Edit Card</button>
+<button>Edit card</button>
 </form>

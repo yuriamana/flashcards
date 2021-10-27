@@ -5,6 +5,9 @@
 <h2>My creations</h2>
 <ul>
     {{#each mySeries}}
-       {{name}}
+       <li>
+
+       <a href="/dashboard/serie/{{_id}}"> {{name}}</a>
+       </li>
     {{/each}}
 </ul>
