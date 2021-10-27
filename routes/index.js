@@ -8,9 +8,12 @@ const CategoryModel = require("./../models/Category");
 
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Flashcards' });
+router.get('/', async (req, res, next) => {
+
+  res.render('index', { title: 'Flashcards', categories: await CategoryModel.find() });
 });
+
+
 
 
 

@@ -7,6 +7,8 @@ const CategoryModel = require("./../models/Category");
 const SerieModel = require("./../models/Serie");
 const { findById } = require("./../models/Card");
 
+
+
 router.get("/dashboard", async (req, res, next) => {
   const myId = req.session?.currentUser?._id
   const mySeries = await SerieModel.find({id_author: myId})
