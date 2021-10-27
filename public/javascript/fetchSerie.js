@@ -22,4 +22,9 @@ async function fetch(event) {
 
 links.forEach(link => {
     link.addEventListener('click', fetch)
+    const name = link.textContent
+    console.log(name)
+    link.style.background = `url(../images/${name})`
+    link.style.backgroundSize = 'cover'
+    link.style.margin = '1em 0'
 })
