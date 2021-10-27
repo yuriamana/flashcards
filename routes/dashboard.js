@@ -140,8 +140,12 @@ router.get("/dashboard/delete/card/:id", async (req, res, next) => {
 // })
 
 router.get('/dashboard/category/:id', async (req, res, next) => {
-  const series = await SerieModel.find({id_category: req.params.id})
-  res.json(series)
+  try {
+    const series = await SerieModel.find({id_category: req.params.id})
+    res.json(series)
+  } catch (err) {
+    next(err)
+  }
 })
 
 module.exports = router;

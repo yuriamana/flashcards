@@ -7,7 +7,9 @@
    
     <li>
       {{#if @root.isLoggedIn}}
-      <span class='action-link' data-id="{{this._id}}">{{this.name}}</span>
+      <span class='action-link' data-id="{{this._id}}">{{this.name}}
+        <ul class='super-list'></ul>
+      </span>
       {{else}}
       <p>
       {{this.name}}
