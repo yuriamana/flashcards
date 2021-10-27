@@ -1,14 +1,18 @@
-<a href="/auth/signin">Sign in</a>
-<a href="/dashboard/add/card">Add a card</a>
-<a href="/dashboard/add/serie">Add a serie</a>
-<a href="/dashboard">Dashboard</a>
+
 
 <h2>Categories list</h2>
 <ul>
+  
   {{#each categories}}
+   
     <li>
+      {{#if @root.isLoggedIn}}
+      <span class='action-link' data-id="{{this._id}}">{{this.name}}</span>
+      {{else}}
+      <p>
       {{this.name}}
-    
+      </p>
+      {{/if}}
     </li>
   {{/each}}
 

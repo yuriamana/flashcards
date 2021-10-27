@@ -8,7 +8,8 @@
 {{!-- {{this.id_author}}
 {{this.id_cards}}
 {{this.id_category}} --}}
-<a href="/dashboard/edit/card/{{card._id}}" >Edit</a>
+<a href="/dashboard/edit/card/{{this._id}}"><i class="fa fa-pen"></i></a>
+<a href="/dashboard/delete/card/{{this._id}}"><i class="fa fa-trash"></i></a>
 </li>
 {{/each}}
 

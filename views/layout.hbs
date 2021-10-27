@@ -3,21 +3,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="../public/stylesheets/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js" integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    {{#each script}}
+      <script src="javascript/{{this}}" type='module'></script>
+    {{/each}}
     <title>Flashcards</title>
   </head>
   <body>
     <header>
       <nav>
         <a href="/" class="link">home</a>
-        {{!-- <a href="/" class="link">All cards category</a> --}}
+        {{! <a href="/" class="link">All cards category</a> }}
         {{#unless isLoggedIn}}
+        <a href="/auth/signin">Sign in</a>
           <a href="/auth/signin" class="link"><i
               class="fa fa-user fa-1x"
             ></i></a>
         {{/unless}}
         {{#if isLoggedIn}}
-          <a class="link" href="/dashboard">
-            <i class="fa fa-user fa-1x"></i></a>
+          
+          <a href="/dashboard/add/card">Add a card</a>
+          <a href="/dashboard/add/serie">Add a serie</a>
+          <a href="/dashboard">Dashboard <i class="fa fa-user fa-1x"></i></a>
+
           <a class="link" href="/auth/signout">signout</a>
         {{/if}}
       </nav>

@@ -5,15 +5,14 @@ const CardModel = require("./../models/Card");
 const UserModel = require("./../models/User");
 const CategoryModel = require("./../models/Category");
 const SerieModel = require("./../models/Serie");
-const { findById } = require("./../models/Card");
 
 router.get("/dashboard", async (req, res, next) => {
   const myId = req.session?.currentUser?._id;
   const mySeries = await SerieModel.find({ id_author: myId });
-  console.log(mySeries);
 
   res.render("dashboard/myLibrary.hbs", { mySeries });
 });
+
 // routes disponibles :
 //   GET
 // - /dashboard
@@ -78,8 +77,8 @@ router.post("/dashboard/add/serie", async (req, res, next) => {
 
 router.get("/dashboard/edit/card/:id", async (req, res, next) => {
   try {
-    const myId = req.session?.currentUser?._id;
-    const card = await CardModel.find(req.params.id);
+    const myId = req?.session?.currentUser?._id;
+    const card = await CardModel.findById(req.params.id);
     if (card.id_author.toString() === myId.toString()) {
       res.render("dashboard/editCard.hbs", { card });
     } else {
@@ -93,7 +92,7 @@ router.get("/dashboard/edit/card/:id", async (req, res, next) => {
 router.post("/dashboard/edit/card/:id", async (req, res, next) => {
   try {
     await CardModel.findByIdAndUpdate(req.params.id, req.body);
-    res.redirect("/dashboard");
+    res.redirect("/dashboard/serie");
   } catch (err) {
     next(err);
   }
@@ -102,11 +101,20 @@ router.post("/dashboard/edit/card/:id", async (req, res, next) => {
 router.get("/dashboard/serie/:id", async (req, res, next) => {
   try {
     const serie = await SerieModel.findById(req.params.id).populate('id_cards')
-    res.render('dashboard/serie', {serie})
+    res.render('./dashboard/serie', {serie})
   } catch (err) {
     next(err);
   }
 });
+
+router.get("/dashboard/delete/card/:id", async (req, res, next) => {
+  try{
+    await CardModel.findByIdAndDelete(req.params.id)
+    res.redirect("/dashboard")
+  } catch (err) {
+    next(err);
+  }
+})
 
 // router.post("/dashboard/add/card", async (req,res,next)=>{
 //   try {
@@ -130,5 +138,10 @@ router.get("/dashboard/serie/:id", async (req, res, next) => {
 //         res.redirect("/dashboard/createCard")
 //     })
 // })
+
+router.get('/dashboard/category/:id', async (req, res, next) => {
+  const series = await SerieModel.find({id_category: req.params.id})
+  res.json(series)
+})
 
 module.exports = router;

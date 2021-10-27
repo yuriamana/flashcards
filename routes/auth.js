@@ -15,7 +15,7 @@ router.get("/signup", (req, res) => {
 
 router.get("/signout", (req,res) => {
     req.session.destroy(function(err) {
-        res.redirect("auth/signin")
+        res.redirect("/auth/signin")
     })
 })
 
@@ -25,12 +25,12 @@ router.post("/signin", async (req,res) => {
 
   if (!foundUser) {
       req.flash("error", "Invalid credentials");
-      res.redirect("auth/signin");
+      res.redirect("/auth/signin");
   } else {
       const isSamePassword = bcrypt.compareSync(password, foundUser.password);
       if (!isSamePassword) {
           req.flash("error", "Invalid credentials");
-          res.redirect("auth/signin")
+          res.redirect("/auth/signin")
       } else {
           const userObject = foundUser.toObject();
           delete userObject.password;
