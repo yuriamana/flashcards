@@ -1,4 +1,5 @@
 <html lang="en">
+  
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,6 +9,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     />
     <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/nav-bar.css">
+
+    {{#each css}}
+      <link rel="stylesheet" href="/stylesheets/{{this}}">
+    {{/each}}
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"
       integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw=="
@@ -19,27 +26,28 @@
     {{/each}}
     <title>Flashcards</title>
   </head>
-  <body>
+
+   <body>
     <header>
       <nav>
-        <a href="/" class="link"><i class="fas fa-chalkboard-teacher"></i>Flashcards</a>
+        <a id="appName" href="/" class="link">
+        <img src="/public/images/FLASH CARD LOGO.PNG" alt="logo">
+        </a>
+        {{!-- <i class="fas fa-chalkboard-teacher"></i>Flashcards</a> --}}
         {{! <a href="/" class="link">All cards category</a> }}
         {{#unless isLoggedIn}}
           {{!-- <a href="/auth/signin">Sign in</a> --}}
-          <a href="/auth/signin" class="link"><i
-              class="fa fa-user fa-1x"
-            ></i></a>
+          <a id="signin" href="/auth/signin" class="link"><i id="logo-signin" class="fa fa-user fa-1x"></i>Sign in</a>
         {{/unless}}
         {{#if isLoggedIn}}
-
-          <a href="/dashboard/add/card">Add a card</a>
-          <a href="/dashboard/add/serie">Add a serie</a>
-          <a href="/dashboard">Dashboard </a>
-
-          <a class="link" href="/auth/signout">signout</a>
+          <a id="myLibrary" href="/dashboard">My Library</a>
+          <a id="addSerie" href="/dashboard/add/serie">Add a serie</a>
+          <a id="addCard" href="/dashboard/add/card">Add a card</a>
+          <a id="signout" class="link" href="/auth/signout">signout</a>
         {{/if}}
       </nav>
     </header>
+ 
     {{{body}}}
   </body>
 </html>

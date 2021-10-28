@@ -10,10 +10,8 @@ router.get("/dashboard", async (req, res, next) => {
   const myId = req.session?.currentUser?._id;
   const mySeries = await SerieModel.find({ id_author: myId });
 
-  res.render("dashboard/myLibrary.hbs", { mySeries });
+  res.render("dashboard/myLibrary.hbs", { mySeries, css:['myLibrary.css'] });
 });
-
-
 
 // routes disponibles :
 //   GET
