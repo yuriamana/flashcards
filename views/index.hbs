@@ -1,35 +1,17 @@
 
-    <h2>Categories list</h2>
 
     <div class="container">
-      {{!-- {{#each categories}} --}}
+   {{#each categories}}
+
       
-        {{#if @root.isLoggedIn}}
-          {{!-- <img src="../images/{{this.name}}.jpg" alt="{{this.name}}" /> --}}
-          <div
-            class="image-background"
-            style='background-image: url("../images/{{this.name}}")'
-          >
-            <span class="action-link" data-id="{{this._id}}">{{this.name}}
-              <ul class="super-list"></ul>
-            </span>
-          </div>
-        {{else}}
-          <div
-            class="image-background"
-            style='background-image: url("../images/'{{this.name}}'.jpg")'
-          >
-            <span class="action-link" data-id="{{this._id}}">{{this.name}}
-              <ul class="super-list"></ul>
-            </span>
-          </div>
-          {{!-- <img src="../images/{{this.name}}.jpg" alt="{{this.name}}" /> --}}
-          <p>
-            {{this.name}}
-          </p>
-        {{/if}}
+        {{!-- <img src="../images/{{this.name}}.jpg" alt="{{this.name}}" > --}}
+        <div class='background-image' style="background-image: url('../images/{{this.name}}.jpg');">
+          <span class="action-link" data-id="{{this._id}}">{{this.name}}
+            <ul class="super-list"></ul>
+        </span>
 
-      {{/each}}
-    </div>
-
- 
+        </div>
+      
+    
+   {{/each}}
+   </div>

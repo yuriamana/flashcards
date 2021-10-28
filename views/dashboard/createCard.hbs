@@ -1,19 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="/stylesheets/add-card.css" />
-  <title>Document</title>
-</head>
-
-<body>
+<section class="form-add-card">
   <form action="/dashboard/add/card" method="post">
   <h3>Add a new card</h3>
 
-  <div id = "form">
-  <div id="addCat">
+  <div>
     <label for="category" class="category">Category:</label>
     <select id="category-selector" class="select" name="category" required>
       <option selected disabled value="-1" selected>Choose a category</option>
@@ -24,8 +13,7 @@
       <option value="Customs-Manners">Customs and Manners</option>
     </select>
   </div>
-
-  <div id="addSerie">
+  <div>
     <label for="serie" class="Serie">Serie:</label>
     <select id="serie-selector" class="select" name="serie" required>
       <option selected disabled value="-1" selected>Choose a serie:</option>
@@ -35,22 +23,20 @@
     </select>
   </div>
 
-  <div "Question">
+  <div>
     <label for="question">Question:</label>
     <textarea name="question" rows="5" cols="33"> </textarea>
   </div>
 
-  <div "answer">
+  <div>
     <label for="answer">Answer:</label>
     <textarea name="answer" rows="5" cols="33"> </textarea>
   </div>
 
-  <button>Add a new card</button>
-  </div>
+  <button class="btn">Add a new card</button>
+
 
 </form>
+</section>
 
-</body>
-
-</html>
 

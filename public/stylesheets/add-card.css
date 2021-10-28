@@ -1,8 +1,4 @@
-body {
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    color: #f9844a;
-}
-
-button {
-    background-color: orange ;
+.form-add-card {
+display: flex;
+justify-content: center;
 }

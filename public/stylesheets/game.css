@@ -22,8 +22,9 @@ body {
   transform-style: preserve-3d;
   cursor: pointer;
   border: solid;
-  border-radius: 30px;
+  /* border-radius: 30px; */
   box-shadow: 5px 5px 10px gray;
+  
 }
 .card.is-flipped {
   transform: rotateY(180deg);
@@ -42,8 +43,10 @@ body {
 }
 .card__face--front {
   background: white;
+  
 }
 .card__face--back {
   background: white;
   transform: rotateY(180deg);
+  
 }

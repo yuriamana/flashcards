@@ -14,7 +14,7 @@ async function fetch(event) {
         console.log(data)
         
         data.forEach(element => {
-            ul.innerHTML += `<li><a href='/game/${element._id}'>${element.name}</a></li>`
+            ul.innerHTML += `<li><a style="text-decoration:none; color: white" href='/game/${element._id}'>${element.name}</a></li>`
         })
         event.target.appendChild(ul)
     }

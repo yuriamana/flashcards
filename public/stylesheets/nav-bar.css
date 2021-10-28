@@ -1,7 +1,15 @@
-nav {
+/* nav {
   padding-top: 25px;
-  height: 40px;
-  background-color: whitesmoke;
+  height: 60px;
+  background-color: white;
+} */
+
+.nav-bar{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color: white;
+  
 }
 
 a#appName {
@@ -15,8 +23,10 @@ a#appName {
   padding-right: 10px;
 }
 
-#logo {
-  padding: 20px;
+.flashcard-logo {
+  width: 200px;
+  padding-top: 0px;
+
 }
 
 #signin {
@@ -28,20 +38,29 @@ a#appName {
 #myLibrary {
   color: #f9844a;
   font-weight: bold;
-  padding-left: 20px;
-  padding-right: 20px;
+  /* padding-left: 20px; */
+  /* padding-right: 20px; */
+  width: 200px;
+  margin-top: 20px;
+
 }
 
 #addSerie {
   color: #f9844a;
   text-decoration: none;
-  padding-right: 20px;
+  /* padding-right: 20px; */
+  width: 200px;
+  margin-top: 20px;
+
 }
 
 #addCard {
   color: #f9844a;
   text-decoration: none;
-  padding-right: 20px;
+  /* padding-right: 20px; */
+  width: 200px;
+  margin-top: 20px;
+
 }
 
 #signout {
@@ -49,4 +68,6 @@ a#appName {
   text-decoration: none;
   padding-right: 20px;
   padding-left: 875px;
+  margin-top: 20px;
+
 }

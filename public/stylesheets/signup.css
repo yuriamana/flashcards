@@ -5,3 +5,8 @@
   flex-direction: column;
   width: 100%;
 }
+
+label {
+  display: block;
+  width: 150px;
+}
