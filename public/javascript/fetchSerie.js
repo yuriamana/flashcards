@@ -28,3 +28,11 @@ links.forEach(link => {
     link.style.backgroundSize = 'cover'
     link.style.margin = '1em 0'
 })
+
+
+
+
+const card = document.querySelector('.card');
+card.addEventListener( 'click', function() {
+  card.classList.toggle('is-flipped');
+});
