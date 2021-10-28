@@ -1,12 +1,29 @@
 <h2>Sign in</h2>
+{{#if msg}}
+  <p class="message {{msg.status}}">{{msg.text}}</p>
+{{/if}}
 <form method="post" action="/auth/signin">
-<label for="email">Email</label>
-<input type="email" name="email" value='a@a'>
-
-<label for="password">Password</label>
-<input type="password" name="password" value='flo'>
-<button>Sign in</button>
-
+  <div>
+    <label for="email">Email</label>
+    <input
+      id="email"
+      type="email"
+      name="email"
+      placeholder="ironhack@gmail.com"
+      value="b@b"
+    />
+  </div>
+  <div>
+    <label for="password">Password</label>
+    <input
+      id="password"
+      type="password"
+      name="password"
+      placeholder="••••••"
+      value="1234"
+    />
+  </div>
+  <button>Sign in</button>
 </form>
 
 <p>Not registered? <a href="/auth/signup">Sign up</a></p>

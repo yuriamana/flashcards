@@ -1,16 +1,13 @@
 <h2>{{serie.name}}</h2>
 
 <ul>
-{{#each serie.id_cards}} 
-<li>
-    <p>Question: {{this.question}}</p>
-     <p>Answer: {{this.answer}}</p>
-{{!-- {{this.id_author}}
-{{this.id_cards}}
-{{this.id_category}} --}}
-<a href="/dashboard/edit/card/{{this._id}}"><i class="fa fa-pen"></i></a>
-<a href="/dashboard/delete/card/{{this._id}}"><i class="fa fa-trash"></i></a>
-</li>
-{{/each}}
+  {{#each serie.id_cards}}
+    <li>
+      <p>Question: {{this.question}}</p>
+      <p>Answer: {{this.answer}}</p>
+      <a href="/dashboard/edit/card/{{this._id}}"><i class="fa fa-pen"></i></a>
+      <a href="/dashboard/delete/card/{{this._id}}"><i class="fa fa-trash"></i></a>
+    </li>
+  {{/each}}
 
 </ul>

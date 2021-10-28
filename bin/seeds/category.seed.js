@@ -5,8 +5,7 @@ const CategoryModel = require("./../../models/Category");
 
 const categories = [
   {
-    name: "FrenchLovers",
-    
+    name: "FrenchLovers", 
   },
   {
     name: "Sports",

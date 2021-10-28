@@ -2,8 +2,6 @@
   <h3>Add a new card</h3>
   <div>
     <label for="category" class="category">Category:</label>
-    </div>
-    <div>
     <select id="category-selector" class="select" name="category" required>
       <option selected disabled value="-1" selected>Choose a category</option>
       <option value="FrenchLovers">FrenchLovers</option>
@@ -16,35 +14,24 @@
 
   <div>
     <label for="serie" class="Serie">Serie:</label>
-    </div>
-    <div>
     <select id="serie-selector" class="select" name="serie" required>
       <option selected disabled value="-1" selected>Choose a serie:</option>
-      {{!-- <option value="Culinary-Specialties">Culinary Specialties</option>
-      <option value="Tennis">Tennis</option>
-      <option value="JavaScript">JavaScript</option>
-      <option value="Monument">Monument</option>
-      <option value="Greeting">Greetings</option> --}}
       {{#each serie}}
-         <option value="{{this._id}}">{{this.name}}</option>
+        <option value="{{this._id}}">{{this.name}}</option>
       {{/each}}
     </select>
   </div>
 
   <div>
     <label for="question">Question:</label>
-    </div>
-    <div>
     <textarea name="question" rows="5" cols="33"> </textarea>
   </div>
 
   <div>
     <label for="answer">Answer:</label>
-    </div>
-    <div>
-    <textarea name="answer" rows="5" cols="33"> </textarea
+    <textarea name="answer" rows="5" cols="33"> </textarea>
   </div>
-  <div>
-<button>Add a new card</button>
-</div>
+
+  <button>Add a new card</button>
+
 </form>

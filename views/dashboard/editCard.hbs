@@ -1,14 +1,21 @@
 <form action="/dashboard/edit/card/{{card._id}}" method="post">
-<h2>Edit card</h2>
+  <h2>Edit card</h2>
 
   <div>
     <label for="question">Question: </label>
-    <input type="text" id='question' name='question' value='{{card.question}}'>
+    <textarea
+      name="question"
+      id="question"
+      cols="33"
+      rows="5"
+    >{{card.question}}</textarea>
+
   </div>
   <div>
     <label for="answer">Answer: </label>
-    <input id='answer' type="text" name="answer" placeholder="answer" value='{{card.answer}}'/>
+    <textarea name="answer" id="" cols="33" rows="5">{{card.answer}}</textarea>
+
   </div>
 
-<button>Edit card</button>
+  <button>Edit card</button>
 </form>

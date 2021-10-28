@@ -1,23 +1,19 @@
 <form action="/dashboard/add/serie" method="post">
-  <h3>Add a new serie</h3>
+  <h3>Add a new serie...</h3>
   <div>
     <label for="category" class="category">Category:</label>
-    </div>
-    <div>
     <select id="category-selector" class="select" name="category" required>
       <option selected disabled value="-1" selected>Choose a category:</option>
       {{#each categories}}
-      <option value="{{_id}}">{{name}}</option>
+        <option value="{{_id}}">{{name}}</option>
       {{/each}}
     </select>
   </div>
 
-   <div>
+  <div>
     <label for="serie">Serie: </label>
-    </div>
-    <div>
-    <input type="text" name="name" id='serie' placeholder="Celebrities"/>
+    <input type="text" name="name" id="serie" required minlength="2" size="20" placeholder="Celebrities" />
   </div>
 
-<button>Add a new serie</button>
+  <button>Add a new serie</button>
 </form>
