@@ -1,0 +1,21 @@
+body{
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+p{
+   color: #f9844a;
+   font-style: oblique;
+   font-size: 20px;
+}
+
+ul{
+    color:white;
+    font-style: normal;
+}
+
+#mySeries{
+    color: #f9844a;
+    text-decoration: none;
+    padding-bottom: 20px;
+}
+
