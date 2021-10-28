@@ -13,6 +13,8 @@ router.get("/dashboard", async (req, res, next) => {
   res.render("dashboard/myLibrary.hbs", { mySeries });
 });
 
+
+
 // routes disponibles :
 //   GET
 // - /dashboard
@@ -92,7 +94,7 @@ router.get("/dashboard/edit/card/:id", async (req, res, next) => {
 router.post("/dashboard/edit/card/:id", async (req, res, next) => {
   try {
     await CardModel.findByIdAndUpdate(req.params.id, req.body);
-    res.redirect("/dashboard/serie");
+    res.redirect("/dashboard");
   } catch (err) {
     next(err);
   }
@@ -101,7 +103,7 @@ router.post("/dashboard/edit/card/:id", async (req, res, next) => {
 router.get("/dashboard/serie/:id", async (req, res, next) => {
   try {
     const serie = await SerieModel.findById(req.params.id).populate('id_cards')
-    res.render('./dashboard/serie', {serie})
+    res.render('./dashboard/serie.hbs', {serie})
   } catch (err) {
     next(err);
   }
@@ -116,28 +118,11 @@ router.get("/dashboard/delete/card/:id", async (req, res, next) => {
   }
 })
 
-// router.post("/dashboard/add/card", async (req,res,next)=>{
-//   try {
-//   const cardToUpdate = req.body;
-//   await SerieModel.findByIdAndUpdate(req.params.id, cardToUpdate);
-//   res.redirect("/dashboard/add/card");
-// } catch (err) {
-//   next(err);
-//}
-
 // Creer une serie -> Ajouter / creer de nouvelles cartes dans cette serie. (AJAX requests)
 // Slect avec les series disponibles + tout les inputs necessaires a la carte
 
 // Creer une serie. -> Creer une carte Select la serie ou creer la carte
 
-//     console.log(req.body)
-//     CardModel.create(newCard)
-//     .then(() => res.redirect("/dashboard"))
-//     .catch((err) => {
-//         console.log(err)
-//         res.redirect("/dashboard/createCard")
-//     })
-// })
 
 router.get('/dashboard/category/:id', async (req, res, next) => {
   try {
@@ -147,5 +132,20 @@ router.get('/dashboard/category/:id', async (req, res, next) => {
     next(err)
   }
 })
+
+router.get("/game/:id", async (req, res, next) => {
+  try {
+    console.log("hello")
+    const serie = await SerieModel.findById(req.params.id).populate("id_cards")
+    console.log("hello2")
+    res.render("dashboard/game.hbs", {serie})
+    console.log("hello3")
+  } catch (err) {
+    next(err);
+  }
+})
+
+
+
 
 module.exports = router;
