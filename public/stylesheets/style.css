@@ -1,13 +1,13 @@
-@import './add-card.css';
-@import './add-serie.css';
-@import './dashboard.css';
-@import './edit-card.css';
-@import './footer.css';
-@import './game.css';
-@import './homepage.css';
-@import './nav-bar.css';
-@import './signin.css';
-@import './signup.css';
+@import "./add-card.css";
+@import "./add-serie.css";
+@import "./dashboard.css";
+@import "./edit-card.css";
+@import "./footer.css";
+@import "./game.css";
+@import "./homepage.css";
+@import "./nav-bar.css";
+@import "./signin.css";
+@import "./signup.css";
 
 body {
   padding: 50px;
@@ -15,5 +15,12 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color: #00b7ff;
 }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+

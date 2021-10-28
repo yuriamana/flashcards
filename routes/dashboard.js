@@ -149,7 +149,7 @@ router.get("/game/:id", async (req, res, next) => {
     }
 
     const cards = shuffle(serie.id_cards)
-    res.render("dashboard/game.hbs", {serie, cards})
+    res.render("dashboard/game.hbs", {serie, cards, script: ["cards.js"]})
     
   } catch (err) {
     next(err);

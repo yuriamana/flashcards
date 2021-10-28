@@ -23,7 +23,7 @@ const UserModel = require("./../../models/User");
 //   },
 // ];
 
-const serieFrenchLover = [
+const serieFrenchLovers = [
   {
     name: "Food",
   },
@@ -77,25 +77,47 @@ const serieSports = [
   },
 ];
 
-const serieGeneralKnowlegde = [
+const serieGeneralKnowledge = [
   {
-    name: ''
+    name: 'Capital city'
   },
   {
-    name: ''
+    name: 'History'
   },
   {
-    name: ''
+    name: 'Geopolitics'
   },
   {
-    name: ''
+    name: 'Monuments'
   },
   {
-    name: ''
+    name: 'Wars'
+  },
+];
+
+const serieCustomsAndManners = [
+  {
+    name: 'Greetings'
+  },
+  {
+    name: 'Traditional festivals'
+  },
+  {
+    name: 'Religion'
+  },
+  {
+    name: 'Superstitions'
+  },
+  {
+    name: 'Family traditions'
   },
 ]
-
-(async function insertSerie() {
+insertSerie('Customs and Manners', serieCustomsAndManners)
+insertSerie('FrenchLovers', serieFrenchLovers)
+insertSerie('Programming', serieProgramming)
+insertSerie('Sports', serieSports)
+insertSerie('General knowledge', serieGeneralKnowledge, true)
+async function insertSerie(name, array, done) {
   try {
     await SerieModel.deleteMany();
     // const categories = await CategoryModel.find();
@@ -111,10 +133,19 @@ const serieGeneralKnowlegde = [
     // series.forEach((serie) => {
     //   serie.id_cards = cards[Math.floor(Math.random() * cards.length)]._id;
     // });
-    const inserted = await SerieModel.insertMany(series); // insert docs in db
-    console.log(`seed serie done : ${inserted.length} documents inserted !`);
-    process.exit();
+
+    const category = await CategoryModel.findOne({name: name})
+    array.forEach(item => {
+      item.id_category = category._id
+    })
+    const inserted = await SerieModel.create(array); // insert docs in db
+    console.log(`seed serie ${name} : ${inserted.length} documents inserted !`);
+    if (done) {
+      process.exit()
+    }
   } catch (err) {
     console.error(err);
   }
-})();
+}
+
+

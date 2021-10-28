@@ -1,3 +1,20 @@
+{{! 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script type="module" src="/javascript/cards.js" </script>
+    <title>cardslist</title>
+</head> }}
 
 <h2>{{serie.name}}</h2>
-
+{{#each cards}}
+  <div class="scene">
+    <div class="card">
+      <div class="card__face card__face--front">{{this.question}}</div>
+      <div class="card__face card__face--back">{{this.answer}}</div>
+    </div>
+  </div>
+{{/each}}
