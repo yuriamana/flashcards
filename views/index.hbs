@@ -1,35 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/public/stylesheets/homepage.css">
-  <title>Document</title>
-</head>
 
-<body>
-  <h2>Categories list</h2>
+    <h2>Categories list</h2>
 
     <div class="container">
-   {{#each categories}}
+      {{!-- {{#each categories}} --}}
+      
+        {{#if @root.isLoggedIn}}
+          {{!-- <img src="../images/{{this.name}}.jpg" alt="{{this.name}}" /> --}}
+          <div
+            class="image-background"
+            style='background-image: url("../images/{{this.name}}")'
+          >
+            <span class="action-link" data-id="{{this._id}}">{{this.name}}
+              <ul class="super-list"></ul>
+            </span>
+          </div>
+        {{else}}
+          <div
+            class="image-background"
+            style='background-image: url("../images/'{{this.name}}'.jpg")'
+          >
+            <span class="action-link" data-id="{{this._id}}">{{this.name}}
+              <ul class="super-list"></ul>
+            </span>
+          </div>
+          {{!-- <img src="../images/{{this.name}}.jpg" alt="{{this.name}}" /> --}}
+          <p>
+            {{this.name}}
+          </p>
+        {{/if}}
 
-      {{#if @root.isLoggedIn}}
-        <img src="../images/{{this.name}}.jpg" alt="{{this.name}}" >
-        <span class="action-link" data-id="{{this._id}}">{{this.name}}
-          <ul class="super-list"></ul>
-        </span>
-      </div>
-      {{else}}
-        <p>
-          {{this.name}}
-        </p>
-      {{/if}}
-    
-   {{/each}}
-   </div>
-
-</body>
-</html>
+      {{/each}}
+    </div>
 
  

@@ -3,11 +3,12 @@
 @import "./dashboard.css";
 @import "./edit-card.css";
 @import "./footer.css";
-@import "./game.css";
 @import "./homepage.css";
 @import "./nav-bar.css";
 @import "./signin.css";
 @import "./signup.css";
+
+
 
 body {
   padding: 0px;
@@ -20,6 +21,20 @@ a {
   color: #00b7ff;
 }
 
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.image-background {
+  width: 200px;
+  height: 250px; 
+  background-size: cover;
+  background-position: center;
+}
 /* title {
   text-decoration: none;
   size: 50px;
