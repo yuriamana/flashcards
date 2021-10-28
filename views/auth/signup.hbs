@@ -2,6 +2,7 @@
 {{#if msg}}
   <p class="message {{msg.status}}">{{msg.text}}</p>
 {{/if}}
+<section class="form-container-signup">
 <form method="post" action="/auth/signup">
   <div>
     <label for="email">Email</label>
@@ -19,3 +20,4 @@
 </form>
 
 <p>Already registered? <a href="/auth/signin">Sign in</a></p>
+</section>
