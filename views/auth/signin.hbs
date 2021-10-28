@@ -2,15 +2,17 @@
 {{#if msg}}
   <p class="message {{msg.status}}">{{msg.text}}</p>
 {{/if}}
-<form method="post" action="/auth/signin">
-  <div>
-    <label for="email">Email</label>
+<section class="form-container">
+<form method="post" action="/auth/signin" id="form-user">
+  <div class="form-wrapper">
+    <label for="email" class="label-ref">Email</label>
     <input
       id="email"
       type="email"
       name="email"
       placeholder="ironhack@gmail.com"
       value="b@b"
+      class="input-email"
     />
   </div>
   <div>
@@ -21,9 +23,11 @@
       name="password"
       placeholder="••••••"
       value="1234"
+      class="input-password"
     />
   </div>
-  <button>Sign in</button>
+  <button class="signin">Sign in</button>
 </form>
 
 <p>Not registered? <a href="/auth/signup">Sign up</a></p>
+</section>
