@@ -135,11 +135,22 @@ router.get('/dashboard/category/:id', async (req, res, next) => {
 
 router.get("/game/:id", async (req, res, next) => {
   try {
-    console.log("hello")
     const serie = await SerieModel.findById(req.params.id).populate("id_cards")
-    console.log("hello2")
-    res.render("dashboard/game.hbs", {serie})
-    console.log("hello3")
+    
+    // shuffle cards
+    function shuffle(cards) {
+      for (let i = cards.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        let temp = cards[i];
+        cards[i] = cards[j];
+        cards[j] = temp; 
+      }
+    return cards
+    }
+
+    const cards = shuffle(serie.id_cards)
+    res.render("dashboard/game.hbs", {serie, cards})
+    
   } catch (err) {
     next(err);
   }

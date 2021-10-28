@@ -22,17 +22,4 @@ async function fetch(event) {
 
 links.forEach(link => {
     link.addEventListener('click', fetch)
-    const name = link.textContent
-    console.log(name)
-    link.style.background = `url(../images/${name})`
-    link.style.backgroundSize = 'cover'
-    link.style.margin = '1em 0'
 })
-
-
-
-
-const card = document.querySelector('.card');
-card.addEventListener( 'click', function() {
-  card.classList.toggle('is-flipped');
-});
