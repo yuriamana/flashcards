@@ -1,4 +1,4 @@
-const cards = document.querySelectorAll('.card');
+let cards = document.querySelectorAll('.card');
 
 
 cards.forEach(card => {
@@ -7,3 +7,4 @@ cards.forEach(card => {
 
 })
 })
+

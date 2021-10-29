@@ -8,6 +8,7 @@
 @import "./signin.css";
 @import "./signup.css";
 @import "./game.css";
+@import "./serie.css";
 
 body {
   padding: 0px;
@@ -19,7 +20,6 @@ body {
 /* a {
   color: #f9844a;
 } */
-
 
 /* title {
   text-decoration: none;
@@ -45,29 +45,21 @@ p {
 }
 
 .btn {
-  background: #3498db;
-  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
-  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
-  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
-  background-image: -o-linear-gradient(top, #3498db, #2980b9);
-  background-image: linear-gradient(to bottom, #3498db, #2980b9);
-  -webkit-border-radius: 28;
-  -moz-border-radius: 28;
-  border-radius: 28px;
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 20px;
-  padding: 10px 20px 10px 20px;
+  color: black;
+  margin-top: 10px;
+  padding: 0.3em 1.2em;
+  border: 0.16em solid rgba(255, 255, 255, 0);
+  border-radius: 2em;
+  box-sizing: border-box;
   text-decoration: none;
-  margin-top: 5px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+  text-align: center;
+  
 }
 
-.btn:hover {
-  background: #3cb0fd;
-  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
-  text-decoration: none;
-}
+/* .btn:hover {
+  color: rgb(52, 52, 255);
+  border-bottom: 1px solid rgb(52, 52, 255);
+} */

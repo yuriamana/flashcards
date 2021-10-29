@@ -1,12 +1,13 @@
-
-
-<h2>{{serie.name}}</h2>
-{{#each cards}}
-  <div class="scene">
-    <div class="card">
-      <div class="card__face card__face--front">{{this.question}}</div>
-      <div class="card__face card__face--back">{{this.answer}}</div>
+<h2 class="serie-game">{{serie.name}}</h2>
+<div class="cards-container">
+  {{#each cards}}
+    {{!-- <button class="btn previous">Previous</button>
+    <button class="btn next">Next</button> --}}
+    <div class="scene">
+      <div class="card">
+        <div class="card__face card__face--front">{{this.question}}</div>
+        <div class="card__face card__face--back">{{this.answer}}</div>
+      </div>
     </div>
-  </div>
-{{/each}}
-
+  {{/each}}
+</div>
