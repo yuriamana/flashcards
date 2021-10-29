@@ -156,7 +156,7 @@ const CradFashion = [
 const CardsPython = [
   {
     question: "What is python ?",
-    answers: "Is an interpreted high-level general-purpose programming language"
+    answer: "Is an interpreted high-level general-purpose programming language"
   }
 ];
 
