@@ -1,0 +1,30 @@
+.serie-list {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    margin-top: 30px;
+    
+    
+}
+
+.question {
+    padding: 20px;
+    border: 3px solid white;
+    border-radius: 30px;
+    
+}
+
+.question-li {
+    list-style-type: none;
+}
+
+
+.fa {
+    color: black;
+}
+
+.serie-cards {
+    padding-bottom: 20px;
+}

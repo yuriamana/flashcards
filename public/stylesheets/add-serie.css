@@ -1,8 +1,12 @@
 .form-create-serie {
     display: flex;
     justify-content: center;
+    padding: 10px;
+    
+}
+label {
+    display: block;
+    width: 150px;
+    padding: 5px;
 }
 
-/* button {
-    background-color: orange ;
-} */

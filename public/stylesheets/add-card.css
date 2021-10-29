@@ -3,3 +3,8 @@ display: flex;
 justify-content: center;
 }
 
+label {
+    display: block;
+    width: 150px;
+    padding: 5px;
+}
