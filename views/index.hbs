@@ -1,17 +1,35 @@
+<h4>
+  A playful and collaborative app aiming at helping users to learn about any
+  themes available on our app
+  </h4>
 
+  <h5> <i class="far fa-question-circle"></i>
+  What is a flashcard ? A double face card with a question on one side and the
+  matching answer on the other side. You’ll discover the answer by clicking on
+  the card…
+  The flashcards are associated to a sub theme (serie) that has to be configured
+  before creating the serie.
+  </h5>
+  <h6><i class="far fa-question-circle"></i>
+  How is it collaborative ? Not only users can access to flashcards already
+  existing in the app but they also can share their knowledge by adding their
+  own flashcard.
+</h6>
 
-    <div class="container">
-   {{#each categories}}
+<div class="container">
 
-      
-        {{!-- <img src="../images/{{this.name}}.jpg" alt="{{this.name}}" > --}}
-        <div class='background-image' style="background-image: url('../images/{{this.name}}.jpg');">
-          <span class="action-link" data-id="{{this._id}}">{{this.name}}
-            <ul class="super-list"></ul>
-        </span>
+  {{#each categories}}
 
-        </div>
-      
-    
-   {{/each}}
-   </div>
+    {{!-- <img src="../images/{{this.name}}.jpg" alt="{{this.name}}" > --}}
+    <div
+      class="background-image"
+      style="background-image: url('../images/{{this.name}}.jpg');"
+    >
+      <span class="action-link" data-id="{{this._id}}">{{this.name}}
+        <ul class="super-list"></ul>
+      </span>
+
+    </div>
+
+  {{/each}}
+</div>

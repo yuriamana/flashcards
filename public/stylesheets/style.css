@@ -12,9 +12,10 @@
 
 body {
   padding: 0px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #ffd6a5;
   box-sizing: border-box;
+  font-size: 15px;
 }
 
 /* a {
@@ -35,13 +36,48 @@ ul {
 }
 
 p {
-  color: #f9844a;
+  color: black;
+  font-size: 15px;
+  margin: 10px;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+h3{
+  color:black;
+  margin: 20px;
+  text-align: center;
+  font-size: 20px;
+}
+
+h4{
+  color:#f9844a;
+  font-size: 20px;
+  width: 600px;
+  margin-left: 450px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+h5{
+  color: black;
+  font-size: 15px;
+  width: 850px;
+  margin-left: 50vh;
+  text-align: justify;
+  margin-top: 20px;
+}
+h6{
+  color: black;
+  font-size: 15px;
+  width: 850px;
+  margin-left: 50vh;
+  text-align: justify;
+  margin-top: 20px;
 }
 
 .btn {

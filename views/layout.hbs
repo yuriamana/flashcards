@@ -29,6 +29,7 @@
 
    <body>
     <header>
+      
       <nav class="nav-bar">
         <a id="appName" href="/" class="link">
         <img class="flashcard-logo" src="/images/FLASH CARD LOGO.PNG" alt="logo">
@@ -37,15 +38,21 @@
         {{! <a href="/" class="link">All cards category</a> }}
         {{#unless isLoggedIn}}
           {{!-- <a href="/auth/signin">Sign in</a> --}}
-          <a id="signin" href="/auth/signin" class="link"><i id="logo-signin" class="fa fa-user fa-1x"></i>Sign in</a>
+          <a id="signin" href="/auth/signin" class="link">Sign in<i id="logo-signin" class="fa fa-user fa-1x"></i></a>
         {{/unless}}
         {{#if isLoggedIn}}
+        
           <a id="myLibrary" href="/dashboard">My Library</a>
           <a id="addSerie" href="/dashboard/add/serie">Add a serie</a>
           <a id="addCard" href="/dashboard/add/card">Add a card</a>
-          <a id="signout" class="link" href="/auth/signout">signout</a>
+        
+  
+          <a style="float:right" id="signout" class="link" href="/auth/signout">signout</a>
+
+
         {{/if}}
-      </nav>
+  </nav> 
+
     </header>
  
     {{{body}}}
