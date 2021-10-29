@@ -23,9 +23,24 @@ const cardsTennis = [
     question: "Who is Roland Garros ?",
     answer: "a French pioneering aviator",
   },
+
+  {
+    question: "how many times federer won roland garros ?",
+    answer: "One time and it was in 2009",
+  },
+
+  {
+    question: "Who has won Roland Garros the most times?",
+    answer: "Rafael Nadal",
+  },
+
+  {
+    question:" What Is An Ace in Tennis  ?",
+  answer: "when a player delivers a legal serve and doesn’t touch the opponent’s racket"
+}
 ];
 
-const cardsSoccer = [
+const cardsFootball = [
   {
     question: "How many time France won world cup ?",
     answer: "Two Times",
@@ -58,6 +73,11 @@ const cardsGreetings = [
     question: "What is a common greeting in Japan ?",
     answer: "In Japan, people greet each other by bowing",
   },
+
+  {
+    question: "With how many kisses do the French greet ?",
+    answer: "2"
+  }
 ];
 
 const cardsTraditionalFestivals = [
@@ -111,10 +131,71 @@ const cardsJavaScript = [
   },
 ];
 
+const cardsRivers = [
+
+  {
+    question: "What is the river that runs through Paris called ?",
+    answer: "Seine river",
+  }
+];
+
+const CardsMusic = [
+  {
+    question: "Who sing Petite Marie ?",
+    answer: "Francis Cabrel",
+  }
+];
+
+const CradFashion = [
+  {
+    question: "What was Coco Chanel's real first name ?",
+    answer: "Gabrielle"
+  }
+];
+
+const CardsPython = [
+  {
+    question: "What is python ?",
+    answer: "Is an interpreted high-level general-purpose programming language"
+  }
+];
+
+const CardsJava = [
+  {
+    question: "What is Java ?",
+    answer: "Java is a cross-platform object-oriented programming language"
+  }
+];
+
+const cardsCapitalCity = [
+  {
+    question: "What is the capital of France ?",
+    answer: "Paris"
+  }
+];
+
+const CardsGeopolitics = [
+  {
+    question: "What is the Geopolitics ?",
+    answer: "the study of the effects of geography on international politics."
+  }
+];
+
+
+const CardsWar = [
+  {
+    question: "What was the London Blitz ?",
+    answer: "A term used for Germany’s bombing campaign on London"
+  }
+];
+
+
+
+
 insertCards("Monuments", cardsMonuments);
 insertCards("Food", cardsFood);
 insertCards("Tennis", cardsTennis);
-insertCards("Soccer", cardsSoccer);
+insertCards("Football", cardsFootball);
 insertCards("Baseball", cardsBaseball);
 insertCards("Basketball", cardsBasketball);
 insertCards("Volleyball", cardsVolleyball);
@@ -124,6 +205,14 @@ insertCards("Religion", cardsReligion);
 insertCards("Superstitions", cardsSuperstitions);
 insertCards("Family traditions", cardsFamilyTraditions);
 insertCards("JavaScript", cardsJavaScript);
+insertCards("Rivers", cardsRivers);
+insertCards("Music", CardsMusic);
+insertCards("Fashion", CradFashion);
+insertCards("Python", CardsPython);
+insertCards("Java", CardsJava);
+insertCards("Capital City", cardsCapitalCity);
+insertCards("Geopolitics", CardsGeopolitics);
+insertCards("War", CardsWar);
 
 async function insertCards(serieName, array) {
   try {

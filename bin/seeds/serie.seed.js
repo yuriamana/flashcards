@@ -64,7 +64,7 @@ const serieSports = [
     name: 'Tennis'
   },
   {
-    name: 'Soccer'
+    name: 'Football'
   },
   {
     name: 'Baseball'
